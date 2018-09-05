@@ -7,7 +7,7 @@ class Contato{
         $this->pdo = new PDO("mysql:dbname=crudoo;host=localhost", "admin", "admin@12");
     }
     
-    public function adicionar($email, $nome = ''){//create
+    public function adicionar($email, $nome = ''){//create , neste caso o nome é opcional
         // Verificar se já existe senão adiciona
         if ($this->existeEmail($email) == FALSE){
             $sql = "INSERT INTO contatos (nome, email) VALUES (:nome, :email)";
