@@ -1,6 +1,6 @@
 <h1>Adicionar</h1>
 
-<form method="POST" action="adicionar_submit.php">
+<form method="POST" >
 	Nome:<br/>
 	<input type="text" name="nome"/><br/><br/>
 	
@@ -10,7 +10,8 @@
 	<input type="submit" value="Adicionar">
 	
 </form>
-
-Dados:
-Nome: <?php echo $_POST['nome'];?>
+<?php if (!empty($_POST['nome'])): ?>
+Dados vindos pra cá:<br/>
+Nome: <?php echo $_POST['nome'];?><br/>
 E-mail: <?php echo $_POST['email'];?>
+<?php endif;?>
