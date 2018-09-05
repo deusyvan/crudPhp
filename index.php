@@ -4,6 +4,7 @@ include 'contato.class.php';
 $contato = new Contato();
 ?>
 <h1>Contatos</h1>
+<a href="adicionar.php">[ ADICIONAR ]</a><br/><br/>
 <table border="1" width="600">
 	<tr>
     	<th>ID</th>
@@ -21,8 +22,8 @@ $contato = new Contato();
     	<td><?php echo $item['nome'];?></td>
     	<td><?php echo $item['email'];?></td>
     	<td>
-    		<a href="">[ EDITAR ]</a>
-    		<a href="excluir.php?email=<?php echo $item['email']?>">[ EXCLUIR ]</a>
+    		<a href="editar.php?id=<?php echo $item['id']?>">[ EDITAR ]</a>
+    		<a href="excluir.php?id=<?php echo $item['id']?>">[ EXCLUIR ]</a>
     	</td>
 	</tr>
 	<?php endforeach;?>
