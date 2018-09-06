@@ -6,6 +6,7 @@
 	height: 100%;
 	z-index: 99; /* Cobrir todo o espaço da tela e acima de todo o site */
 	background-color: rgba(0,0,0,0.6); /*Cor preta com 60 % de transparencia*/
+	display: none; /*Modal será aberto somente quando nescessário assim já começa fechado*/
 }
 
 .modal{
