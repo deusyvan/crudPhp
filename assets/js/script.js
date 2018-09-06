@@ -9,8 +9,8 @@ $(function() {
 		$.ajax({
 			url:link,
 			type:'GET',
-			success:function(){
-				
+			success:function(html){//Recebe o html
+				$('.modal').html(html);//O modal recebe esse html do link dentro do modal
 			}
 		});
 	});
