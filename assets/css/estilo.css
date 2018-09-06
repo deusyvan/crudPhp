@@ -16,6 +16,6 @@
 	z-index: 100;
 	top: 50px;
 	left: 50%; /*Uma altura boa mas o modal não ficou centralizado*/
-	
+	margin-left:-200px; /*Trazendo o modal ao centro*/
 	
 }
