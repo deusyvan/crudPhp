@@ -50,12 +50,19 @@ class Contato{
         
     }
         
-    public function editar($nome,$id){//Update
-            $sql = "UPDATE contatos SET nome = :nome WHERE id = :id";
+    public function editar($nome,$email,$id){//Update
+        if($this->existeEmail($email) == FALSE){
+            $sql = "UPDATE contatos SET nome = :nome, email = :email WHERE id = :id";
             $sql = $this->pdo->prepare($sql);
             $sql->bindValue(':nome', $nome);
+            $sql->bindValue(':email', $email);
             $sql->bindValue(':id', $id);
             $sql->execute();
+            
+            return TRUE;
+        } else {
+            return FALSE;
+        }
     }
     
     public function excluir($id){//Delete

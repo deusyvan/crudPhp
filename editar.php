@@ -25,7 +25,7 @@ exit;
     <input type="text" name="nome" value="<?php echo $info['nome']; ?>" /><br/><br/>
     
     E-mail:<br/>
-    <?php echo $info['email']; ?><br/><br/>
+    <input type="email" name="email" value="<?php echo $info['email']; ?>" /> <br/><br/>
     
     <input type="submit" value="Salvar">
 
