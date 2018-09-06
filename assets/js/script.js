@@ -5,5 +5,13 @@ $(function() {
 		$('.modal_bg').show(); //Abrindo nosso modal
 		
 		var link = $(this).attr('href'); // Buscando o link pelo atributo href
+		
+		$.ajax({
+			url:link,
+			type:'GET',
+			success:function(){
+				
+			}
+		});
 	});
 });
